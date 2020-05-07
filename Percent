@@ -14,7 +14,7 @@ int main()
     if(per >= 70) 
         { printf("Grade B"); }
     else 
-    if(per >= 70) 
+    if(per > 70) 
         {printf("Grade C"); } 
      else   
     if(per >= 55) 
