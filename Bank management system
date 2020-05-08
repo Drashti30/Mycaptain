@@ -1,0 +1,141 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    clrscr();
+    float draw,dep,transfer;
+    char name[30];
+    float balance=6000;
+    int account1;
+    
+    long unsigned int type;
+    int transaction=1;
+    int option;
+    printf("WELCOME TO STATE BANK OF INDIA\n\n\n");
+    printf("ENTER YOUR NAME:");
+    gets(name);
+    printf("\nPLEASE ENTER YOUR ACCOUNT NUMBER:\n");
+    scanf("%lu",&type);
+    while(transaction==1)
+    {
+        printf("\nCHHOSE WHAT YOU WANT TO DO\n");
+        printf("\t1.BALANCE INQUIRY\n");
+        printf("\t2.DEPOSIT\n");
+        printf("\t3.WIDDRAW\n");
+        printf("\t4.TRANSFER\n");
+        scanf("%d",&option);
+        switch(option)
+        {
+            case 1:
+            printf("\t\t\t*BALANCE INQUIRY*\n\n");  
+            printf("YOUR ACCOUNT BALANCE%.2fRs \n\n",balance);
+            break;
+            
+            case 2:
+            printf("\n\n\n*DEPOSIT AMOUNT*\n\n");
+            printf("HOW MUCH YOU WANT TO DEPOSIT\n\n");
+            scanf("%f",&dep);
+            if(dep>0&&dep<=20000)
+            {
+                printf("\nYOUR %.2fRs DEPOSIT TED IN YOUR ACCOUNT\n\n",dep);
+                balance=balance+dep;
+               
+            }
+            else 
+            if(dep>20000)
+            {
+                printf("\nYOU CANNOT EXTEND THE EXCEED THE LIMIT\n\n");
+            }
+            else
+            {
+                printf("\nINVALID DEPOSIT AMOUNT");
+            }
+            break;
+            
+            case 3:
+            printf("\n\n\n*WIDDRAW AMOUNT*\n\n");
+            printf("HOW MUCH YOU WANT TO WIDDRAW?\n\n");
+            scanf("%f",&draw);
+            if(draw<=balance&&draw<=20000)
+            {
+                printf("\nYOU JUST WIDDRAW %.2f YOUR ACCOUNT\n\n",dep);
+                balance=balance-draw;
+            }
+            else 
+            if(draw>20000)
+            {
+                printf("\nYOU CANNOT EXTEND THE EXCEED THE LIMIT\n\n");
+            }
+            else
+            {
+                printf("\nYOU DONT HAVE ENOUGH BALANCE");
+            }
+            break;
+            case 4:
+            printf("\t\t*TRANFER AMOUNT*\n\n");
+            printf("\n\tACCOUNT NUMBER IN WHICH YOU WANT TO TRANSFER:");
+            scanf("%d",&account1);
+            printf("\nHOW MUCH YOU WANT TO TRANSFER");
+            scanf("%f",&transfer);
+            if(balance>=transfer)
+            {
+                printf("\nYOUR RS SUCCESSFULLY TRANSFERED");
+                balance=balance-transfer;
+            }
+            else
+            {
+                printf("INSUFFICIENT BALANCE\n\n");
+                }
+            break;
+            default:
+            printf("INVALID TRANSACTION");
+            
+       }
+        transaction=0;
+        while(transaction!=1&&transaction!=2)
+        {
+            printf("DO YOU WANT TO DO ANOTHER TRANSACTION");
+            printf("1.YES");
+            printf("2.NO");
+            scanf("%d",&transaction);
+            {
+                printf("INVALID NUMBER \nCHOOSE BETWEEN 1 AND 2 ONLY \n");
+                }
+            }
+        }
+    printf("\n\n\n\t\tBRINDA BANK LTD\n\n");
+    printf("\t\t\tDATE-2th JAN 2000 \tTIME -4pm\n");
+    printf("\n\n\nYOUR NAME:%s\n\n",name);
+    printf("YOUR ACCOUNT NUMBER-%lu\n\n",type);
+    if(dep>=0&&dep<20000)
+    {
+        printf("\t\t\tYOU DEPOSITED%.2f Rs \n",dep);
+    }
+    else
+    {
+        printf("\n\t\t YOU HAVE DEPOSITED 0RS\n");
+        
+    }
+    if(draw>0&&draw<=20000&&draw<=balance)
+    {
+        printf("\t\t\t YOU HAVE WIDDRAW %.2fRS\n",draw);
+    }
+    else
+    {
+        printf("\t\t\tYOU HAVE WIDDRAW 0Rs\n");
+    }
+    if(transfer >0&&transfer<=20000&&transfer<=balance)
+    {
+        printf("\t\t\tYOU HAVE %.2fRs\n",transfer);
+    }
+    else
+    {
+        printf("\t\t\tYOU HABE TRANSFERED 0Rs\n");
+    }
+    printf("TOTAL BALANCE REMAINING%.2f RS\n",balance);
+    printf("\t\t\t___THANK YOU___");
+    printf("\t\t WELCOME TO STATE BANK OF INDIA");
+    printf("\tCONTACT OUR WEBSITE FOR MORE DETAILS\t");
+    return 0;
+}
