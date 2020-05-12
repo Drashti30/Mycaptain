@@ -3,7 +3,6 @@
 #include<stdlib.h>
 int main()
 {
-    clrscr();
     float draw,dep,transfer;
     char name[30];
     float balance=6000;
