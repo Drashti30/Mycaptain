@@ -1,17 +1,28 @@
-#include <stdio.h> 
-int main() 
-    { 	
-    
-     	int a,b; 	 	//Input values 	
-      printf("Enter the value of a: "); 	
-      scanf("%d",&a); 
-     	printf("Enter the value of b: "); 	 
-      scanf("%d",&b);	 	 	//Numbers before swapping 	
-    printf("Before swapping... a:%d, b:%d\n",a,b); 	 	//swapping numbers
-    	a = a+b;	//step 1 
-    	b = a-b;	//step 2 	
-    a = a-b; 	//step 3 	
-     	//Numbers after swapping 
-    	printf("After swapping... a: %d, b: %d\n",a,b); 	
-    return 0; 
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int a,b;
+    printf("ENTER THE VALUES a and b are-");
+    scanf("%d%d",&a,&b);
+    printf("\nBEFORE SWAPPING\ta=%d,\tb=%d",a,b);
+    //if a=4and b=5
+    a=a*b;//4*5=9
+    b=a/b;//9/4=5
+    a=a/b;//9/5=4
+    printf("\nAFTER SWAPPING\ta=%d,\tb=%d",a,b);
+    return 0;
+}
+//another method 
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int a,b;
+    printf("ENTER THE VALUES a and b are-");
+    scanf("%d%d",&a,&b);
+    printf("\nBEFORE SWAPPING\ta=%d,\tb=%d",a,b);
+    printf("\nAFTER SWAPPING\ta=%d,\tb=%d",b,a);
+    return 0;
 }
