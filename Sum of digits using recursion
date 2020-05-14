@@ -13,3 +13,16 @@ int main()
     printf("\nAFTER SWAPPING\ta=%d,\tb=%d",a,b);
     return 0;
 }
+//another method 
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int a,b;
+    printf("ENTER THE VALUES a and b are-");
+    scanf("%d%d",&a,&b);
+    printf("\nBEFORE SWAPPING\ta=%d,\tb=%d",a,b);
+    printf("\nAFTER SWAPPING\ta=%d,\tb=%d",b,a);
+    return 0;
+}
