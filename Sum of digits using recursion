@@ -1,27 +1,15 @@
-#include <stdio.h>
-int sumDigits(int num)
-{
-    static int sum=0;
-    if(num>0)
-    {
-        sum+=(num%10);
-        sumDigits(num/10);
-    }
-    else
-    {
-        return sum;
-    }
-}
+#include<stdio.h>
+#include<stdlib.h>
 int main()
 {
-    int number,sum;
-     
-    printf("Enter a positive integer number: ");
-    scanf("%d",&number);
-     
-    sum=sumDigits(number);
-     
-    printf("Sum of all digits are: %d\n",sum);
- 
+    int a,b;
+    printf("ENTER THE VALUES a and b are-");
+    scanf("%d%d",&a,&b);
+    printf("\nBEFORE SWAPPING\ta=%d,\tb=%d",a,b);
+    //if a=4and b=5
+    a=a*b;//4*5=9
+    b=a/b;//9/4=5
+    a=a/b;//9/5=4
+    printf("\nAFTER SWAPPING\ta=%d,\tb=%d",a,b);
     return 0;
 }
