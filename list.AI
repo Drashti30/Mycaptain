@@ -1,0 +1,9 @@
+List = []
+Num= int(input("Please enter the Total Number of List Elements: "))
+for i in range(1, Num + 1):
+    value = int(input("Please enter the Value of %d Element : " %i))
+    List.append(value)
+print("\nPositive Numbers in this List are : ")
+for j in range(Num):
+    if(List[j] >= 0):
+        print(List[j], end = '   ')
